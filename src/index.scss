@@ -1,0 +1,22 @@
+$font: 'scientifica';
+
+@font-face {
+  font-family: 'scientifica';
+  src: url('./assets/font/#{$font}.woff2') format('woff2'),
+      url('./assets/font/#{$font}.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: $font;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  padding: 2rem;
+  height: auto;
+}
