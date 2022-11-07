@@ -19,7 +19,7 @@ export default function Projects() {
                 (result) => {
                     // Sort the response by the newest date first
                     result.sort(function(a, b) {
-                        return new Date(b.updated_at) - new Date(a.updated_at)
+                        return new Date(b.pushed_at) - new Date(a.pushed_at)
                     });
 
                     setIsLoaded(true);
