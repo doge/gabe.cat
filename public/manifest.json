@@ -1,9 +1,9 @@
 {
   "short_name": "gabe.cat",
-  "name": "gabe.cat website",
+  "name": "me@gabe.cat",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "cat.png",
       "type": "image/png",
       "sizes": "12x12"
     }
