@@ -21,6 +21,10 @@ const router = createBrowserRouter([
     loader: () => { return redirect("/about"); }
   },
   {
+    path: '*',
+    loader: () => { return redirect("/"); }
+  },
+  {
     path: '/about',
     element: <Home />,
     children: [
