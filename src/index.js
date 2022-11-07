@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import { 
   createBrowserRouter,
+  redirect,
   RouterProvider
 } from 'react-router-dom';
 
@@ -17,15 +18,25 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
   {
     path: '/',
+    loader: () => { return redirect("/about"); }
+  },
+  {
+    path: '/about',
+    element: <Home />,
+    children: [
+      {
+        path: '/about',
+        element: <About />
+      }
+    ]
+  },
+  {
+    path: '/projects',
     element: <Home />,
     children: [
       {
         path: '/projects',
         element: <Projects />
-      },
-      {
-        path: '/about',
-        element: <About />
       }
     ]
   }
